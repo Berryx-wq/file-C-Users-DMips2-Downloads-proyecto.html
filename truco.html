@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Botón Regresar con Animación</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 100vh;
+            margin: 0;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            color: #3b5998;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 30px;
+            max-width: 600px;
+        }
+
+        .back-button {
+            width: 200px;
+            height: 50px;
+            font-size: 18px;
+            background-color: #3b5998;
+            color: white;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .back-button:hover {
+            background-color: #2d4373;
+        }
+
+        .back-button:active {
+            transform: scale(1.1); /* Aumenta el tamaño del botón al hacer clic */
+            animation: clickAnimation 0.3s ease-out; /* Activamos la animación */
+        }
+
+        /* Animación que regresa el tamaño del botón después del clic */
+        @keyframes clickAnimation {
+            0% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Título Impactante -->
+    <h1>¿Listo para Retroceder en el Tiempo?</h1>
+    
+    <!-- Introducción Impactante -->
+    <p>
+        En el vertiginoso mundo digital en el que vivimos, a veces todo lo que necesitamos es dar un paso atrás.
+        No te preocupes, ¡nosotros te ayudamos a hacerlo! Si por alguna razón necesitas regresar a la página anterior, 
+        solo presiona el botón de abajo y volverás a tu punto de partida. ¡Tu viaje en la web está solo a un clic de distancia!
+    </p>
+    
+    <!-- Botón para regresar -->
+    <button class="back-button" onclick="goBack()">Regresar</button>
+
+    <script>
+        // Función para regresar a la página anterior
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+</body>
+</html>
